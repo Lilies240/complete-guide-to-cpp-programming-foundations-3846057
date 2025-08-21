@@ -11,6 +11,7 @@ struct game_character{
     std::string name;
     int level;
     character_role role;
+    std::string catchphrase;
 };
 
 int main(){
@@ -18,8 +19,10 @@ int main(){
     buddy.name = "Tony";
     buddy.level = 10;
     buddy.role = character_role::sidekick;
+    buddy.catchphrase = "Sup homie, I'm Tony!";
     
     std::cout << buddy.name << " is a level " << buddy.level << " character with the role of " << (int) buddy.role << "." << std::endl;
+    std::cout << "Their catchphrase is \"" << buddy.catchphrase << "\".";
 
     std::cout << std::endl << std::endl;
     return 0;

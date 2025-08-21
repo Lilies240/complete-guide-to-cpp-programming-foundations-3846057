@@ -8,7 +8,7 @@
 int add_int(float a, double b, long double c){
     int result = 0;
 
-    // Write your code here
+    result += static_cast<int> (a) + static_cast<int> (b) + static_cast<int> (c);
     
     return result;
 }
@@ -19,6 +19,15 @@ int main(){
     long double c = 4.6;
 
     int learnerResult = add_int(a, b, c);
+    
+    std::cout << "Your code returned: " << learnerResult << std::endl;
+
+
+    a = -2.0;
+    b = -3.9;
+    c = 4.6;
+
+    learnerResult = add_int(a, b, c);
     
     std::cout << "Your code returned: " << learnerResult << std::endl;
     
